@@ -1,0 +1,46 @@
+package Interfaz;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class Menu extends JFrame implements ActionListener{
+	JButton btnadd=new JButton("Agregar Sensor");
+	JButton btnremove=new JButton("Eliminar Sensor");
+	JButton btnsearch=new JButton("Buscar Sensor");
+	public Menu() throws Throwable{
+		super("Planta de agua");
+		setVisible(true);
+        setLayout(null);
+        setResizable(false);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(300,300);
+        setLocation(600,250);
+        btnadd.setBounds(40, 20, 100, 50);
+        btnremove.setBounds(40, 55, 100, 50);
+        btnsearch.setBounds(40, 90, 100, 50);
+        btnadd.addActionListener(this);
+        btnremove.addActionListener(this);
+        btnsearch.addActionListener(this);
+        btnadd.setActionCommand("add");
+        btnremove.setActionCommand("remove");
+        btnsearch.setActionCommand("search");
+        add(btnadd);
+        add(btnremove);
+        add(btnsearch);
+	}
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		String cmd = e.getActionCommand();
+		if(cmd.equals("add")) {
+			
+		}else if(cmd.equals("remove")){
+			
+		}else if(cmd.equals("search")) {
+			
+		}
+	}
+}
