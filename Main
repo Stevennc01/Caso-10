@@ -1,0 +1,59 @@
+package Program;
+
+import Arbol.Arbol_General;
+import Arbol.Nodo;
+import Interfaz.Menu;
+
+public class Principal {
+
+	public static void main(String[] args) throws Throwable {
+		Arbol_General arbol=new Arbol_General();
+		Nodo arboln=arbol.insertarRaiz("Planta");
+		arbol.raiz.print_nodo();
+		arbol.insertar(arboln, "San Jose", "Planta");
+		arbol.insertar(arboln, "Escazu", "Planta");
+		arbol.insertar(arboln, "Cartago", "Planta");
+		arbol.insertar(arboln, "Paraiso", "Planta");
+		arbol.insertar(arboln, "Alajuela", "Planta");
+		arbol.insertar(arboln, "San Ramon", "Planta");
+		arbol.insertar(arboln, "Heredia", "Planta");
+		arbol.insertar(arboln, "Barva", "Planta");
+		arbol.insertar(arboln, "Liberia", "Planta");
+		arbol.insertar(arboln, "Nicoya", "Planta");
+		arbol.insertar(arboln, "Limon", "Planta");
+		arbol.insertar(arboln, "Pococi", "Planta");
+		arbol.insertar(arboln, "Puntarenas", "Planta");
+		arbol.insertar(arboln, "Esparza", "Planta");
+		arbol.insertar(arboln, "Carmen", "San Jose");
+		arbol.insertar(arboln, "San Miguel", "Escazu");
+		arbol.insertar(arboln, "Oriental", "Cartago");
+		arbol.insertar(arboln, "Paraiso", "Paraiso");
+		arbol.insertar(arboln, "Alajuela", "Alajuela");
+		arbol.insertar(arboln, "San Ramon", "San Ramon");
+		arbol.insertar(arboln, "Heredia", "Heredia");
+		arbol.insertar(arboln, "Barva", "Barva");
+		arbol.insertar(arboln, "Liberia", "Liberia");
+		arbol.insertar(arboln, "Nicoya", "Nicoya");
+		arbol.insertar(arboln, "Limon", "Limon");
+		arbol.insertar(arboln, "Guapiles", "Pococi");
+		arbol.insertar(arboln, "Puntarenas", "Puntarenas");
+		arbol.insertar(arboln, "Espiritu Santo", "Esparza");
+		arbol.insertar(arboln, "Merced", "San Jose");
+		arbol.insertar(arboln, "San Antonio", "Escazu");
+		arbol.insertar(arboln, "Occidental", "Cartago");
+		arbol.insertar(arboln, "Santiago", "Paraiso");
+		arbol.insertar(arboln, "San Jose", "Alajuela");
+		arbol.insertar(arboln, "Santiago", "San Ramon");
+		arbol.insertar(arboln, "Mercedes", "Heredia");
+		arbol.insertar(arboln, "San Pedro", "Barva");
+		arbol.insertar(arboln, "Cañas Dulces", "Liberia");
+		arbol.insertar(arboln, "Mansion", "Nicoya");
+		arbol.insertar(arboln, "Valle La Estrella", "Limon");
+		arbol.insertar(arboln, "Jimenez", "Pococi");
+		arbol.insertar(arboln, "Pitahaya", "Puntarenas");
+		arbol.insertar(arboln, "San Juan Grande", "Esparza");
+		arbol.imprimir(arboln);	
+		new Menu();
+	}
+
+}
