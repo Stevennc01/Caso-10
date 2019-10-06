@@ -1,0 +1,33 @@
+package Arbol;
+
+public class Nodo {
+	String dato;
+	int numhijos;
+	Nodo hijos[];
+	Nodo hijosT[];
+	public Nodo(String dato) {
+		this.dato=dato;
+		this.numhijos=0;
+	}
+	public void copiarH() {
+		hijosT=new Nodo[numhijos+1];
+		for(int i=0;i<this.numhijos;i++) {
+			hijosT[i]=hijos[i];
+		}
+	}
+	public void aumentar(Nodo nodo) {
+		copiarH();
+		hijosT[this.numhijos]=nodo;
+		hijos=hijosT;
+		this.numhijos++;
+	}
+	public String getDato() {
+		return dato;
+	}
+	public void setDato(String dato) {
+		this.dato = dato;
+	}
+	public void print_nodo() {
+		System.out.println("{"+dato+"}");
+	}
+}
