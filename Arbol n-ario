@@ -1,0 +1,46 @@
+package Arbol;
+
+public class Arbol_General {
+	public Nodo raiz;
+	public Nodo insertarRaiz(String dato) {
+		raiz=new Nodo(dato);
+		return raiz;
+	}
+	public void imprimir(Nodo nodo) {
+		for(int i=0;i<nodo.numhijos;i++) {
+			nodo.hijos[i].print_nodo();
+			imprimir(nodo.hijos[i]);
+		}
+	}
+	public void insertar(Nodo nodo,String dato, String padre) {
+		Nodo nuevo=new Nodo(dato);
+		if(nodo.getDato().equals(padre)) { 
+			nodo.aumentar(nuevo);
+		}
+		else {
+			for(int i=0;i<nodo.numhijos;i++) {
+				if (nodo.hijos[i].getDato().equals(padre)) {
+					nodo.hijos[i].aumentar(nuevo);
+				}
+				else {
+					insertar(nodo.hijos[i],dato,padre);
+				}
+			}
+		}
+	}
+	/*public static class principal{
+		
+		public static void main(String[] args) {
+			Arbol_General arbol=new Arbol_General();
+			Nodo arboln=arbol.insertarRaiz("0");
+			arbol.raiz.print_nodo();
+			arbol.insertar(arboln, "1", "0");
+			arbol.insertar(arboln, "1.1", "1");
+			arbol.insertar(arboln, "2", "0");
+			arbol.insertar(arboln, "3", "0");
+			arbol.imprimir(arboln);
+		}
+			
+		}*/
+}
+
